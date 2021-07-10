@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3FF80F3E-65A9-493D-A7D2-C941EFFF2F50}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DesktopApp1</RootNamespace>
+    <AssemblyName>DesktopApp1</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AllInfoFormCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllInfoFormCar.Designer.cs">
+      <DependentUpon>AllInfoFormCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllInfoFormPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllInfoFormPerson.Designer.cs">
+      <DependentUpon>AllInfoFormPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assignment2.cs" />
+    <Compile Include="Connected Services\Assignment3Reference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\Assignment4Reference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\Assignment5Reference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\Assignment6Reference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="DALCar.cs" />
+    <Compile Include="Connection.cs" />
+    <Compile Include="Controller.cs" />
+    <Compile Include="DALPerson.cs" />
+    <Compile Include="InputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputForm.Designer.cs">
+      <DependentUpon>InputForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrationForm.Designer.cs">
+      <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AllInfoFormCar.resx">
+      <DependentUpon>AllInfoFormCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllInfoFormPerson.resx">
+      <DependentUpon>AllInfoFormPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InputForm.resx">
+      <DependentUpon>InputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistrationForm.resx">
+      <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Connected Services\Assignment3Reference\DesktopApp1.Assignment3Reference.HelloWorldResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Assignment3Reference\DesktopApp1.Assignment3Reference.rentacarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Assignment3Reference\WebService3.wsdl" />
+    <None Include="Connected Services\Assignment4Reference\WebServiceAssignment4.wsdl" />
+    <None Include="Connected Services\Assignment5Reference\DesktopApp1.Assignment5Reference.AddEmployeeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Assignment5Reference\DesktopApp1.Assignment5Reference.Employee.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Assignment5Reference\DesktopApp1.Assignment5Reference.HelloWorldResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Assignment5Reference\DesktopApp1.Assignment5Reference.RemoveEmployeeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Assignment5Reference\DesktopApp1.Assignment5Reference.searchEmployeeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Assignment5Reference\DesktopApp1.Assignment5Reference.updateEmployeeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Assignment5Reference\WebServiceAss5.wsdl" />
+    <None Include="Connected Services\Assignment6Reference\DesktopApp1.Assignment6Reference.GetAllColumnsFromEmp1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Assignment6Reference\DesktopApp1.Assignment6Reference.GetAllColumnsFromEmp2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Assignment6Reference\DesktopApp1.Assignment6Reference.GetAllIndexesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Assignment6Reference\DesktopApp1.Assignment6Reference.GetAllKeysResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Assignment6Reference\DesktopApp1.Assignment6Reference.GetAllTableConstraintsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Assignment6Reference\DesktopApp1.Assignment6Reference.GetAllTablesDB1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Assignment6Reference\DesktopApp1.Assignment6Reference.GetAllTablesDB2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Assignment6Reference\DesktopApp1.Assignment6Reference.GetInfoEmpSickness2004Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Assignment6Reference\DesktopApp1.Assignment6Reference.GetInfoFromEmpAndRelativesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Assignment6Reference\DesktopApp1.Assignment6Reference.GetMetaDataFromEmpAndRelatedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Assignment6Reference\DesktopApp1.Assignment6Reference.GetNameAbsentMostResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Assignment6Reference\DesktopApp1.Assignment6Reference.HelloWorldResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Assignment6Reference\WebServiceAss6.wsdl" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\Assignment3Reference\" />
+    <WCFMetadataStorage Include="Connected Services\Assignment4Reference\" />
+    <WCFMetadataStorage Include="Connected Services\Assignment5Reference\" />
+    <WCFMetadataStorage Include="Connected Services\Assignment6Reference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Assignment 3\Assignment 3.csproj">
+      <Project>{1cf5d62e-c966-4318-b3a3-3dc89d9bc0ca}</Project>
+      <Name>Assignment 3</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Assignment4\Assignment4.csproj">
+      <Project>{30cac7ff-eec9-4b65-a73b-8c127b37ca11}</Project>
+      <Name>Assignment4</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Assignment5\Assignment5.csproj">
+      <Project>{09ab4435-925a-4944-9524-42a3ae257764}</Project>
+      <Name>Assignment5</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Assignment3Reference\WebService3.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Assignment3Reference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Assignment3Reference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Assignment3Reference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Assignment4Reference\WebServiceAssignment4.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Assignment4Reference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Assignment4Reference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Assignment4Reference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Assignment5Reference\WebServiceAss5.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Assignment5Reference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Assignment5Reference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Assignment5Reference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Assignment6Reference\WebServiceAss6.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Assignment6Reference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Assignment6Reference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Assignment6Reference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
